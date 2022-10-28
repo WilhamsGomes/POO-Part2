@@ -43,10 +43,10 @@ public class Atendente extends CadastroPessoa{
 		System.out.println("Hora atual: " + hora);
 		System.out.println("Fim do expediente em: "+ Integer.valueOf(this.expediente));
 		
-		if(hora >= (Integer.valueOf(this.expediente)) ) {
-			return HorarioExpediente.HORARIO;
-		} else {
+		if( (hora >= (Integer.valueOf(this.expediente))) ) {
 			return HorarioExpediente.FORADOHORARIO;
+		} else {
+			return HorarioExpediente.HORARIO;
 		}
 
 		

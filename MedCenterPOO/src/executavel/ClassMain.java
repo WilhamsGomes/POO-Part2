@@ -60,15 +60,31 @@ public class ClassMain {
 			
 		} else if (optionSystem == 2) {
 			
-			Atendente atendente = new Atendente();
-			String nome = JOptionPane.showInputDialog("Qual o nome do atendente?");
-			String areaAtendimento = JOptionPane.showInputDialog("Qual a área de atuação do atendente?");
-			String fimExpediente = JOptionPane.showInputDialog("Qual o horário do fim do expediente?");
-			atendente.setExpediente(fimExpediente);
-			atendente.setNome(nome);
-			atendente.setAreaAtendimento(areaAtendimento);
-			System.out.println(atendente.toString());
-			System.out.println(atendente.verificarExpediente());
+			String [] optionsPaciente = {"Sim", "Não"};
+			Integer optionSystemPaciente = JOptionPane.showOptionDialog(null, "Atendente possui cadastro?", "Clique no botão",  JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, optionsPaciente, 0);
+			
+			if(optionSystemPaciente == 1) {
+				
+				Atendente atendente = new Atendente();
+				String nome = JOptionPane.showInputDialog("Qual o nome do atendente?");
+				String idade = JOptionPane.showInputDialog("Qual a idade do atendente?");
+				String cpf = JOptionPane.showInputDialog("Informe o CPF do atendente?");
+				String dataNascimento = JOptionPane.showInputDialog("Informe a data de nascimento do atendente?");
+				String nomeMae = JOptionPane.showInputDialog("Informe o nome do pai do atendente?");
+				String nomePai = JOptionPane.showInputDialog("Informe o nome da mãe do atendente?");
+				
+				String areaAtendimento = JOptionPane.showInputDialog("Qual a área de atuação do atendente?");
+				String fimExpediente = JOptionPane.showInputDialog("Qual o horário do fim do expediente?");
+				atendente.setExpediente(fimExpediente);
+				atendente.setNome(nome);
+				atendente.setAreaAtendimento(areaAtendimento);
+				System.out.println(atendente.toString());
+				System.out.println(atendente.verificarExpediente());
+				
+			} else if (optionSystemPaciente == 0) {
+				System.out.println("Cadastro existente");
+			}
+			
 			
 		}
 		
