@@ -37,8 +37,8 @@ public class ClassMain {
 			medico.setNomePai(nomePai);
 			
 			medico.setAreaAtuacao(areaAtuacao);
-			//System.out.println(medico.toString());
 			System.out.println(medico.toString());
+			
 		} else if (optionSystem == 1) {
 			
 			Paciente paciente = new Paciente();
