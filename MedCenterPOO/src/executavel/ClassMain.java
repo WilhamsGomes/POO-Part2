@@ -1,8 +1,5 @@
 package executavel;
 
-import java.sql.Date;
-import java.util.Calendar;
-
 import javax.swing.JOptionPane;
 
 import classes.Atendente;
@@ -43,11 +40,21 @@ public class ClassMain {
 			
 			Paciente paciente = new Paciente();
 			String nome = JOptionPane.showInputDialog("Qual o nome do paciente");
-			String diagnostico = JOptionPane.showInputDialog("Qual o diagnóstico do paciente?");
 			String idade = JOptionPane.showInputDialog("Qual a idade do paciente?");
+			String cpf = JOptionPane.showInputDialog("Informe o CPF do paciente");
+			String dataNascimento = JOptionPane.showInputDialog("Informe a data de nascimento do paciente");
+			String nomeMae = JOptionPane.showInputDialog("Informe o nome do pai do paciente");
+			String nomePai = JOptionPane.showInputDialog("Informe o nome da mãe do paciente");
+			
+			String diagnostico = JOptionPane.showInputDialog("Qual o diagnóstico do paciente?");
+			
 			paciente.setNome(nome);
 			paciente.setDiagnostico(diagnostico);
+			paciente.setCpf(cpf);
 			paciente.setIdade(Integer.valueOf(idade));
+			paciente.setDataNascimento(dataNascimento);
+			paciente.setNomeMae(nomeMae);
+			paciente.setNomePai(nomePai);
 			System.out.println(paciente.toString());
 			System.out.println(paciente.msgMaiorIdade());
 			
